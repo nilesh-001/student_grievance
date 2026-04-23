@@ -1,4 +1,3 @@
-const path = require("path");
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
@@ -80,7 +79,6 @@ const auth = (req, res, next) => {
     }
 };
 
-app.use(express.static(path.join(__dirname, "dist")));
 
 // ================= AUTH ROUTES =================
 
@@ -231,7 +229,6 @@ app.listen(PORT, () => {
 });
 
 
-// THEN this
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+app.get("/", (req, res) => {
+  res.send("API is running...");
 });
