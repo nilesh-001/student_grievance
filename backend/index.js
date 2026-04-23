@@ -230,6 +230,9 @@ app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
 });
 
-app.get("/*", (req, res) => {
+app.use("/api", routes);   // API first
+
+// THEN this
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
