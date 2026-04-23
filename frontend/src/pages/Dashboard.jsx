@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/dashboard.css";
 
-const API = "/api";
+const API = "https://student-grievance-2.onrender.com/api";
 
 export default function Dashboard() {
   const [list, setList] = useState([]);

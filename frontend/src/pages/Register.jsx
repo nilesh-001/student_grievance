@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 
-const API = "/api";
+const API = "https://student-grievance-2.onrender.com/api";
 
 export default function Register() {
   const [data, setData] = useState({ name: "", email: "", password: "" });
