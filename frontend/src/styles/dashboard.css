@@ -1,0 +1,231 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f1f5f9;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #111827, #1f2937);
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.primary-btn {
+  width: 100%;
+  padding: 10px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #2563eb;
+}
+
+/* NAV */
+.sidebar nav p {
+  margin: 10px 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.sidebar nav .active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* LOGOUT */
+.logout {
+  margin-top: 40px;
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-section h3 {
+  margin-bottom: 10px;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-section textarea {
+  resize: none;
+  height: 80px;
+}
+
+.form-section button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-section button:hover {
+  background: #1f2937;
+}
+
+/* ===== TABLE SECTION ===== */
+.table-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.table-section h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== TABLE ===== */
+.grievance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADERS */
+.grievance-table thead {
+  background: #f3f4f6;
+}
+
+.grievance-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* ROWS */
+.grievance-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* HOVER EFFECT */
+.grievance-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ===== STATUS ===== */
+.status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.resolved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.resolve-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resolve-btn:hover {
+  background: #059669;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* DISABLED */
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
